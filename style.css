@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);        /* paragraphs*/
+    --Very-light-gray: hsl(0, 0%, 95%);                  /*background, headings, buttons*/
+}
+
+body{
+    width: 100%;
+    max-width: 1440px;
+    height:100vh ;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: var(--Very-light-gray);
+}
+
+
+.container{
+    position: relative;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.card:nth-child(1){
+    
+    background: var(--Bright-orange);
+}
+
+.card:nth-child(2){
+    background: var(--Dark-cyan);
+}
+
+.card:nth-child(3){
+    background: var(--Very-dark-cyan);
+}
+
+.card img{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+
+.card h1{
+    font-family: 'Big Shoulders Display';
+    font-size: 35px;
+    margin: 40px;
+    font-weight: 700;
+    color: var(--Very-light-gray);
+}
+
+.card p{
+    width: 210px;
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+    margin-left: 40px;
+    color: var(--Transparent-white);
+    line-height: 30px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca';
+    width: 160px;
+    height: 45px;
+    border-radius: 30px;
+    margin:40px 70px;
+    background: var(--Very-light-gray);
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.card:nth-child(1) .button{
+    color: var(--Bright-orange);
+}
+
+.card:nth-child(1) .button:hover{
+    border: 1px solid var(--Transparent-white);
+    background: var(--Bright-orange);
+    color:var(--Transparent-white)
+}
+
+.card:nth-child(2) .button{
+    color: var(--Dark-cyan);
+}
+
+.card:nth-child(2) .button:hover{
+    border: 1px solid var(--Transparent-white);
+    background: var(--Dark-cyan);
+    color:var(--Transparent-white)
+}
+
+.card:nth-child(3) .button{
+    color: var(--Very-dark-cyan);
+}
+
+.card:nth-child(3) .button:hover{
+    border: 1px solid var(--Transparent-white);
+    background: var(--Very-dark-cyan);
+    color:var(--Transparent-white)
+}
+
+.attribution{
+    margin-top: 20px;
+}
+
+@media screen and (max-width:900px){
+
+    body{
+        max-width: 900px;
+        min-height: 1800px;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .container{ 
+        width: 600px;
+        height: 1500px;
+        flex-direction: column;
+    }
+
+    .card-sedans,
+    .card-suvs,
+    .card-luxury{
+        width: 600px;
+        height: 500px;
+    }
+
+    .card img{
+        margin-left: 60px;
+    }
+
+    .card h1{
+        font-size: 45px;
+        margin: 60px;
+    }
+
+    .card p{
+        width: 410px;
+        font-size: 15px;
+        margin-left: 60px;
+    }
+
+}
+
+@media screen and (max-width:600px){
+
+    body{
+        max-width: 600px;
+        min-height: 1800px;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .container{ 
+        width: 400px;
+        height: 1500px;
+        flex-direction: column;
+    }
+
+    .card-sedans,
+    .card-suvs,
+    .card-luxury{
+        width: 400px;
+        height: 500px;
+    }
+
+    .card h1{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .card p{
+        width: 300px;
+        margin-left: 60px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    
+    body{
+        width: 360px;
+    }
+
+    .container{ 
+        width: 340px;
+        height: 1500px;
+    }
+
+    .card img{
+        width: 80px;
+        height: 60px;
+    }
+
+    .card-sedans,
+    .card-suvs,
+    .card-luxury{
+        width: 340px;
+        height: 500px;
+    }
+
+    .card p{
+        width: 68%;
+        font-size: 15px;
+        margin-left: 60px;
+    }
+
+
+
+
+}
